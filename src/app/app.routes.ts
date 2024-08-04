@@ -8,7 +8,7 @@ export const routes: Routes = [
     title:'Reciclaje',component:RecyclerComponent,path:'recycle'
   },
   {
-    title:'¿Qué es el reciclaje',component:HomeComponent,path:''
+    title:'¿Qué es el reciclaje?',component:HomeComponent,path:''
   },
   {
     title:'Papeleras',component:BinsComponent,path:'bins'
