@@ -5,6 +5,7 @@ import { Component, Input } from "@angular/core";
   standalone:true,
   imports: [],
   template:`
+  @defer{
   <div class="flex flex-wrap sm:flex-nowrap justify-center h-[80vh] mt-8" >
     <div>
       <img src="/marron.jpeg" alt="bin brown" class="m-auto w-40" (click)="toggleImageSizeBrown()"/>
@@ -60,6 +61,11 @@ import { Component, Input } from "@angular/core";
       </div>
     </div>
   </div>
+}@placeholder {
+  <div class="flex items-center justify-center h-[80vh] mt-8">
+    <h1 class="text-5xl sm:text-9xl animate-pulse">Cargando...</h1>
+  </div>
+}
   `,
   // templateUrl:'../assets/binsinfo.html'
 })
