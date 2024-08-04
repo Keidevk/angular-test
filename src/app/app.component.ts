@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavComponent } from './components/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterOutlet,NavComponent],
+  template:`
+  <Nav-Component/>
+  <router-outlet></router-outlet>` ,
 })
 export class AppComponent {
-  title = 'angular-test';
+  title = '¿Qué es el reciclaje?';
 }
