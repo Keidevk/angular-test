@@ -8,7 +8,10 @@ import { Component } from "@angular/core";
   @defer{
   <div class="flex flex-wrap sm:flex-nowrap justify-center h-[80vh] mt-8" >
     <div>
-      <img src="/marron.jpeg" alt="bin brown" class="m-auto w-40" (click)="toggleImageSizeBrown()"/>
+      <div class="grid justify-around">
+        <img src="/marron.jpeg" alt="bin brown" class="m-auto w-40"/>
+        <p class="w-52 h-7 text-center border-t-2 border-t-black animate-pulse" [style.display]="showed ? 'none':'block'" (click)="toggleImageSizeBrown()">Mostrar Informción</p>
+      </div>
       <div [style.opacity]="isImageEnlargedbrow ? 1 : 0" class="p-4 transition ease-in-out duration-300 transform">
         <h2 class="text-2xl font-bold text-center">Papelera de Cartón</h2>
         <ul>
@@ -25,7 +28,10 @@ import { Component } from "@angular/core";
       </div>
     </div>
     <div>
-      <img src="/verde.jpeg" alt="bin brown" class="m-auto w-40" (click)="toggleImageSizeGreen()"/>
+      <div class="grid justify-around">
+      <img src="/verde.jpeg" alt="bin brown" class="m-auto w-40"/>
+      <p class="w-52 h-7 text-center border-t-2 border-t-black animate-pulse" [style.display]="showed ? 'none':'block'" (click)="toggleImageSizeGreen()">Mostrar Informción</p>
+      </div>
       <div
         [style.opacity]="isImageEnlargedGreen ? 1 : 0"
         class="p-4 transition ease-in-out duration-300 transform hi">
@@ -44,7 +50,11 @@ import { Component } from "@angular/core";
       </div>
     </div>
     <div>
-      <img src="/gris.jpeg" alt="bin brown" class="m-auto w-40" (click)="toggleImageSizeGray()"/>
+      <div class="grid justify-around">
+        <img src="/gris.jpeg" alt="bin brown" class="m-auto w-40"/>
+      <p class="w-52 h-7 text-center border-t-2 border-t-black animate-pulse" [style.display]="showed ? 'none':'block'" (click)="toggleImageSizeGray()">Mostrar Informción</p>
+
+      </div>
       <div [style.opacity]="isImageEnlargedGray ? 1 : 0" class="p-4 transition ease-in-out duration-300 transform">
         <h2 class="text-2xl font-bold text-center">Papelera de Basura General</h2>
         <ul>
@@ -67,10 +77,18 @@ import { Component } from "@angular/core";
   </div>
 }
   `,
-  // templateUrl:'../assets/binsinfo.html'
 })
 
 export class BinsComponent{
+  isClicked = false;
+  showed = false;
+  showTheInfo() {
+    this.isClicked = !this.isClicked;
+    if(this.showed==false){
+      this.showed = true;
+    }
+  }
+
   isImageEnlargedbrow = false;
   isImageEnlargedGreen = false;
   isImageEnlargedGray = false;

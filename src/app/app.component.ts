@@ -11,5 +11,4 @@ import { NavComponent } from './components/nav.component';
   <router-outlet></router-outlet>` ,
 })
 export class AppComponent {
-  title = '¿Qué es el reciclaje?';
 }
