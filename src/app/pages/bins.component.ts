@@ -6,13 +6,14 @@ import { Component } from "@angular/core";
   imports: [],
   template:`
   @defer{
-  <div class="flex flex-wrap sm:flex-nowrap justify-center h-[80vh] mt-8" >
+  <div class="flex absolute z-10 flex-wrap sm:flex-nowrap justify-center h-[80vh] mt-8" >
     <div>
       <div class="grid justify-around">
         <img src="/marron.jpeg" alt="bin brown" class="m-auto w-40"/>
         <p class="w-52 h-7 text-center border-t-2 border-t-black animate-pulse" [style.display]="showed ? 'none':'block'" (click)="toggleImageSizeBrown()">Mostrar Informción</p>
       </div>
-      <div [style.opacity]="isImageEnlargedbrow ? 1 : 0" class="p-4 transition ease-in-out duration-300 transform">
+      <div [style.opacity]="isImageEnlargedbrow ? 1 : 0"
+      class="p-4 transition ease-in-out duration-300 transform bg-white rounded-lg">
         <h2 class="text-2xl font-bold text-center">Papelera de Cartón</h2>
         <ul>
             <li>Características:
@@ -34,7 +35,7 @@ import { Component } from "@angular/core";
       </div>
       <div
         [style.opacity]="isImageEnlargedGreen ? 1 : 0"
-        class="p-4 transition ease-in-out duration-300 transform hi">
+        class="p-4 transition ease-in-out duration-300 transform bg-white rounded-lg">
         <h2 class="text-2xl font-bold text-center">Papelera de Plástico</h2>
         <ul>
           <li>Características:
@@ -55,7 +56,8 @@ import { Component } from "@angular/core";
       <p class="w-52 h-7 text-center border-t-2 border-t-black animate-pulse" [style.display]="showed ? 'none':'block'" (click)="toggleImageSizeGray()">Mostrar Informción</p>
 
       </div>
-      <div [style.opacity]="isImageEnlargedGray ? 1 : 0" class="p-4 transition ease-in-out duration-300 transform">
+      <div [style.opacity]="isImageEnlargedGray ? 1 : 0"
+      class="p-4 transition ease-in-out duration-300 transform bg-white rounded-lg">
         <h2 class="text-2xl font-bold text-center">Papelera de Basura General</h2>
         <ul>
             <li>Características:
@@ -71,6 +73,11 @@ import { Component } from "@angular/core";
       </div>
     </div>
   </div>
+  <div class="-z-50">
+      <div class="bg-green-custom h-52 w-full absolute top-3/4 left-0 rounded-t-full">.</div>
+      <div class="bg-green-custom h-64 w-full absolute top-2/3 left-0 rounded-t-full">.</div>
+      <div class="bg-green-custom h-5/6 w-full absolute top-full -left-1">.</div>
+    </div>
 }@placeholder {
   <div class="flex items-center justify-center h-[80vh] mt-8">
     <h1 class="text-5xl sm:text-9xl animate-pulse">Cargando...</h1>
